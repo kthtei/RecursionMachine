@@ -74,6 +74,16 @@ public class CommandProcessor {
                     System.out.println(caseName + "(" + input1 + ", " + input2 + ") -> "
                             + RecursionMethod.strDist(input1, input2));
                     break;
+                case "groupSum6":
+                    System.out.println(caseName + "(" + input1 + ", [" + input2 + "], " + input3 + ") -> "
+                            + RecursionMethod.groupSum6(Integer.parseInt(input1), RecursionMethod.createAnIntArray(input2),
+                            Integer.parseInt(input3)));
+                    break;
+                case "groupNoAdj":
+                    System.out.println(caseName + "(" + input1 + ", [" + input2 + "], " + input3 + ") -> "
+                            + RecursionMethod.groupNoAdj(Integer.parseInt(input1), RecursionMethod.createAnIntArray(input2),
+                            Integer.parseInt(input3)));
+                    break;    
                 case "":
                     break;
                 default:
@@ -141,6 +151,16 @@ public class CommandProcessor {
                 case "strDist":
                     System.out.println(caseName + "(" + input1 + ", " + input2 + ") -> "
                             + RecursionMethod.strDist(input1, input2));
+                    break;
+                case "groupSum6":
+                    System.out.println(caseName + "(" + input1 + ", [" + input2 + "], " + input3 + ") -> "
+                            + RecursionMethod.groupSum6(Integer.parseInt(input1), RecursionMethod.createAnIntArray(input2),
+                            Integer.parseInt(input3)));
+                    break;
+                case "groupNoAdj":
+                    System.out.println(caseName + "(" + input1 + ", [" + input2 + "], " + input3 + ") -> "
+                            + RecursionMethod.groupNoAdj(Integer.parseInt(input1), RecursionMethod.createAnIntArray(input2),
+                            Integer.parseInt(input3)));
                     break;
                 case "":
                     break;
