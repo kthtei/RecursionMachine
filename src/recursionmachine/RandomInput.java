@@ -52,6 +52,14 @@ public class RandomInput {
     public int randomNumber() {
         return 1 + new Random().nextInt(10); // generating random number between 1-10
     }
+    
+    public String randomNumbersForAnIntArray() {  // The string method to create an input to create an int array
+        String result = "";
+        for (int i = 0; i < randomNumber() - 1; i++) { // numberArray length between 1-10
+            result += "" + randomNumber() + ", ";
+        }
+        return result + randomNumber();
+    }    
 
     public String randomString() {
         String result = "";
