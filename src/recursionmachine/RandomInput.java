@@ -7,9 +7,6 @@ public class RandomInput {
         String result = "";
 
         switch (randomNumber()) {
-            case 0:
-                result = "gotya";
-                break;
             case 1: // starting from factorial in order
                 result = "factorial<SEP>" + randomNumber();
                 break;
