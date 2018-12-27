@@ -6,7 +6,7 @@ public class RandomInput {
     public String inputGenerator() {
         String result = "";
 
-        switch (randomNumber()) {
+        switch (1 + new Random().nextInt(12)) {
             case 1: // starting from factorial in order
                 result = "factorial<SEP>" + randomNumber();
                 break;
@@ -37,7 +37,14 @@ public class RandomInput {
             case 10:
                 result = "strDist<SEP>" + randomString() + "<SEP>" + randomString();
                 break;
-
+            case 11:
+                result = "groupSum6<SEP>" + randomNumber() + "<SEP>" + randomNumbersForAnIntArray() +
+                        "<SEP>" + randomNumber();
+                break;
+            case 12:
+                result = "groupNoAdj<SEP>" + randomNumber() + "<SEP>" + randomNumbersForAnIntArray() +
+                        "<SEP>" + randomNumber();
+                break;
         }
         return result;
     }
@@ -49,14 +56,14 @@ public class RandomInput {
     public int randomNumber() {
         return 1 + new Random().nextInt(10); // generating random number between 1-10
     }
-    
+
     public String randomNumbersForAnIntArray() {  // The string method to create an input to create an int array
         String result = "";
         for (int i = 0; i < randomNumber() - 1; i++) { // numberArray length between 1-10
             result += "" + randomNumber() + ", ";
         }
         return result + randomNumber();
-    }    
+    }
 
     public String randomString() {
         String result = "";
